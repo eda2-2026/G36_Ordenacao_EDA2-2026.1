@@ -3,9 +3,9 @@
 ## Grupo 36
 |Matrícula | Aluno |
 | -- | -- |
-| XXXXX  | Integrante 1 |
+| 231026616  | Davi Emanuel Ribeiro de Oliveira |
 | XXXXX  | Integrante 2 |
-| XXXXX  | Integrante 3 |
+
 
 ## Sobre 
 Aplicação web de triagem para pronto-socorro que utiliza algoritmos clássicos de ordenação para gerenciar a fila de pacientes. O sistema ordena pacientes por gravidade (usando Bubble Sort) e por tempo de chegada (usando Selection Sort).
