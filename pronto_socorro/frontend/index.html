@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pronto Socorro — Triagem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="pulse"></div>
+    <h1>UPA — Sistema de Triagem</h1>
+    <span class="api-status api-ok" id="api-status">API OK</span>
+    <span id="relogio"></span>
+  </header>
+
+  <div class="main">
+
+    <!-- ── SIDEBAR ── -->
+    <div class="sidebar">
+
+      <h2>Novo Paciente</h2>
+
+      <div class="form-group">
+        <label>Nome</label>
+        <input id="i-nome" placeholder="Ex: João Silva">
+      </div>
+
+      <div class="form-group">
+        <label>Idade</label>
+        <input id="i-idade" type="number" placeholder="Ex: 45">
+      </div>
+
+      <div class="form-group">
+        <label>Queixa</label>
+        <textarea id="i-queixa" placeholder="Descreva o sintoma..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Chegou há (min)</label>
+        <input id="i-chegada" type="number" placeholder="Ex: 20">
+      </div>
+
+      <div class="form-group">
+        <label>Gravidade</label>
+        <div class="grav-row">
+          <button class="gbtn sr" id="g-r" onclick="selGrav('vermelho')">🔴 Crítico</button>
+          <button class="gbtn"    id="g-y" onclick="selGrav('amarelo')">🟡 Urgente</button>
+          <button class="gbtn"    id="g-g" onclick="selGrav('verde')">🟢 Leve</button>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="admitirPaciente()">+ ADMITIR PACIENTE</button>
+
+      <div class="divider"></div>
+
+      <!-- Algoritmos -->
+      <div>
+        <div class="algo-desc">
+          <strong>Bubble Sort</strong> — Ordena por <strong>gravidade</strong>.
+          Pacientes críticos borbulham ao topo da fila.
+        </div>
+        <button class="btn-algo bb" onclick="ordenar('bubble')">
+          ▶ Ordenar por Gravidade
+          <span class="badge badge-b">BUBBLE SORT</span>
+        </button>
+
+        <div class="algo-desc">
+          <strong>Selection Sort</strong> — Ordena por <strong>tempo de espera</strong>.
+          Quem esperou mais vai ao topo.
+        </div>
+        <button class="btn-algo bs" onclick="ordenar('selection')">
+          ▶ Ordenar por Chegada
+          <span class="badge badge-s">SELECTION SORT</span>
+        </button>
+      </div>
+
+      <div class="divider"></div>
+      <button class="btn-reset" onclick="resetar()">↺ Resetar Fila</button>
+
+    </div><!-- /sidebar -->
+
+    <!-- ── CONTENT ── -->
+    <div class="content">
+
+      <!-- Stats -->
+      <div class="stats-bar">
+        <div class="stat-card sc-red">
+          <div class="slabel">Críticos</div>
+          <div class="sval" id="ct-r">0</div>
+        </div>
+        <div class="stat-card sc-yellow">
+          <div class="slabel">Urgentes</div>
+          <div class="sval" id="ct-y">0</div>
+        </div>
+        <div class="stat-card sc-green">
+          <div class="slabel">Leves</div>
+          <div class="sval" id="ct-g">0</div>
+        </div>
+        <div class="stat-card sc-blue">
+          <div class="slabel">Total</div>
+          <div class="sval" id="ct-t">0</div>
+        </div>
+      </div>
+
+      <!-- Log -->
+      <div class="log-box" id="log">Conectando à API...</div>
+
+      <!-- Passos do algoritmo -->
+      <div id="passos-wrap" style="display:none">
+        <div class="passos-box" id="passos-box"></div>
+      </div>
+
+      <!-- Fila -->
+      <div class="section-header" style="margin-top:14px">
+        <h2>Fila de Atendimento</h2>
+        <span class="atag" id="atag" style="display:none"></span>
+      </div>
+
+      <div class="queue" id="queue"></div>
+
+    </div><!-- /content -->
+
+  </div><!-- /main -->
+
+  <script src="script.js"></script>
+</body>
+</html>
