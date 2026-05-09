@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nome": "Maria Souza",
+    "idade": 72,
+    "chegada_min": 45,
+    "gravidade": "vermelho",
+    "queixa": "Dor no peito"
+  },
+  {
+    "id": 2,
+    "nome": "Pedro Lima",
+    "idade": 34,
+    "chegada_min": 10,
+    "gravidade": "verde",
+    "queixa": "Dor de cabeça leve"
+  },
+  {
+    "id": 3,
+    "nome": "Ana Costa",
+    "idade": 58,
+    "chegada_min": 30,
+    "gravidade": "amarelo",
+    "queixa": "Febre alta"
+  },
+  {
+    "id": 4,
+    "nome": "Carlos Nunes",
+    "idade": 5,
+    "chegada_min": 25,
+    "gravidade": "vermelho",
+    "queixa": "Convulsão"
+  },
+  {
+    "id": 5,
+    "nome": "Lucia Ferreira",
+    "idade": 44,
+    "chegada_min": 5,
+    "gravidade": "verde",
+    "queixa": "Corte superficial"
+  },
+  {
+    "id": 6,
+    "nome": "Roberto Alves",
+    "idade": 61,
+    "chegada_min": 55,
+    "gravidade": "amarelo",
+    "queixa": "Tontura e náusea"
+  },
+  {
+    "id": 7,
+    "nome": "Julia Martins",
+    "idade": 28,
+    "chegada_min": 15,
+    "gravidade": "verde",
+    "queixa": "Torção no tornozelo"
+  },
+  {
+    "id": 8,
+    "nome": "Antônio Ramos",
+    "idade": 80,
+    "chegada_min": 40,
+    "gravidade": "vermelho",
+    "queixa": "Falta de ar grave"
+  }
+]
