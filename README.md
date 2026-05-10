@@ -10,6 +10,21 @@
 ## Sobre 
 Aplicação web de triagem para pronto-socorro que utiliza algoritmos clássicos de ordenação para gerenciar a fila de pacientes. O sistema ordena pacientes por gravidade (usando Bubble Sort) e por tempo de chegada (usando Selection Sort).
 
+## ⚡ Quick Start
+
+```bash
+# Terminal 1: Backend
+cd pronto_socorro/backend
+npm install
+npm start
+
+# Terminal 2: Frontend
+cd pronto_socorro/frontend
+python3 -m http.server 8000
+```
+
+Acesse: **`http://localhost:8000`** 🎉
+
 ## Tecnologias Utilizadas
 
 - **Backend:** Node.js + Express.js
@@ -29,7 +44,7 @@ Aplicação web de triagem para pronto-socorro que utiliza algoritmos clássicos
 ## Estrutura do Projeto
 
 ```
-pronto_socorro_v2/
+pronto_socorro/
 ├── backend/
 │   ├── server.js              # API Express
 │   ├── data/
@@ -52,37 +67,44 @@ pronto_socorro_v2/
 1. Clone o repositório:
    ```bash
    git clone https://github.com/eda2-2026/G36_Ordenacao_EDA2-2026.1.git
-   cd G36_Ordenacao_EDA2-2026.1/pronto_socorro_v2
+   cd G36_Ordenacao_EDA2-2026.1
    ```
 
 2. Instale as dependências do backend:
    ```bash
-   cd backend
+   cd pronto_socorro/backend
    npm install
+   cd ../..
    ```
 
 ## Como Usar
 
-### Iniciar o Servidor Backend
+### Passo 1: Instalar Dependências
 
 ```bash
-cd pronto_socorro_v2/backend
+cd pronto_socorro/backend
+npm install
+```
+
+### Passo 2: Iniciar o Backend (Terminal 1)
+
+```bash
+cd pronto_socorro/backend
 npm start
 ```
 
-A API rodará em: `http://localhost:3001`
+✅ Backend rodará em: **`http://localhost:3001`**
 
-### Abrir o Frontend
+### Passo 3: Iniciar o Frontend (Terminal 2)
 
-Abra o arquivo `frontend/index.html` em um navegador web.
-
-Ou use um servidor local (Python):
 ```bash
-cd pronto_socorro_v2/frontend
-python -m http.server 8000
+cd pronto_socorro/frontend
+python3 -m http.server 8000
 ```
 
-Acesse: `http://localhost:8000`
+✅ Frontend rodará em: **`http://localhost:8000`**
+
+Abra seu navegador e acesse: `http://localhost:8000`
 
 ## API Endpoints
 
@@ -105,7 +127,7 @@ curl -X POST http://localhost:3001/pacientes \
     "nome": "João Silva",
     "idade": 45,
     "queixa": "Dor no peito",
-    "chegada": 20,
+    "chegada_min": 20,
     "gravidade": "vermelho"
   }'
 
