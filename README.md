@@ -4,7 +4,7 @@
 |Matrícula | Aluno |
 | -- | -- |
 | 231026616  | Davi Emanuel Ribeiro de Oliveira |
-| XXXXX  | Integrante 2 |
+| 202045769  | Gabriel Saraiva Canabrava |
 
 
 ## Sobre 
@@ -152,11 +152,13 @@ curl http://localhost:3001/ordenar/selection
 
 ## Screenshots
 
+![Interface do Pronto Socorro](pronto_socorro/frontend/image/Captura%20de%20tela%202026-05-10%20203319.png)
+
 _Exemplos da interface_
 
 ## Video
 
-_Link do vídeo de demonstração será adicionado em breve_
+[Link do vídeo ](https://drive.google.com/file/d/1pfE6mnuN0JDR0N4Y2XpiqQG-bMv49dWM/view?usp=sharing)
 
 ---
 
